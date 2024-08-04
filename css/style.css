@@ -453,21 +453,21 @@ h2 {
 /* Подключение шрифтов */
 @font-face {
   font-family: "Poppins";
-  src: url(/fonts/Poppins/Poppins-Regular.ttf);
+  src: url(./fonts/Poppins/Poppins-Regular.ttf);
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "PoppinsBold";
-  src: url(/fonts/Poppins/Poppins-Bold.ttf);
+  src: url(./fonts/Poppins/Poppins-Bold.ttf);
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
   font-family: "PoppinsLight";
-  src: url(/fonts/Poppins/Poppins-Light.ttf);
+  src: url(./fonts/Poppins/Poppins-Light.ttf);
   font-style: normal;
   font-weight: normal;
 }

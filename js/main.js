@@ -6,16 +6,6 @@ const save_button = document.querySelector(".saveButton");
 const cancel_button = document.querySelector(".cancelButton");
 const visible_items = document.querySelectorAll(".visible-item");
 
-// Load saved state from localStorage
-document.addEventListener("DOMContentLoaded", () => {
-    edit_items.forEach((item, index) => {
-        const savedValue = localStorage.getItem(`editItem-${index}`);
-        if (savedValue) {
-            item.innerText = savedValue;
-        }
-    });
-});
-
 edit_button.addEventListener("click", () => {
     for (const item of edit_items) {
         const text = item.innerText;
@@ -78,5 +68,15 @@ document.addEventListener('pointerdown', (mouseEvent) => {
 
     rippleEl.addEventListener('transitionend', () => {
         rippleEl.remove();
+    });
+});
+
+// Load saved state from localStorage
+document.addEventListener("DOMContentLoaded", () => {
+    edit_items.forEach((item, index) => {
+        const savedValue = localStorage.getItem(`editItem-${index}`);
+        if (savedValue) {
+            item.innerText = savedValue;
+        }
     });
 });

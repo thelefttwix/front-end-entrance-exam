@@ -14,10 +14,10 @@ body {
 }
 
 :root {
-  --primary-color: #28D979;
+  --primary-color: #28d979;
   --hover-color: #1aa659;
   --background-color: #fff;
-  --shadow-color: rgba(0,0,0,0.1);
+  --shadow-color: rgba(0, 0, 0, 0.1);
   --font-color-dark: #333;
   --font-color-light: #666;
   --font-color-white: #fff;
@@ -52,7 +52,8 @@ header {
   margin-left: 20px;
 }
 
-.nameBox, .languagesBox {
+.nameBox,
+.languagesBox {
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
@@ -76,15 +77,15 @@ header {
 }
 
 .languageText {
-  width: 100px; 
-  text-align: left; 
+  width: 100px;
+  text-align: left;
 }
 
 .languageBar {
   height: 1rem;
   background-color: var(--primary-color);
   border-radius: 3px;
-  margin-left: 10px; 
+  margin-left: 10px;
   flex-shrink: 0;
 }
 
@@ -99,8 +100,6 @@ header {
 .languageBar[data-level="low"] {
   width: 30%;
 }
-
-
 
 .cardContainerExperienceTools {
   display: flex;
@@ -139,18 +138,27 @@ header {
   text-align: center;
   margin: 0;
   position: relative;
-  border-radius: 4px;
+  border-radius: 20px;
   top: -30px;
   z-index: 1;
 }
 
-.tools img {
-  width: 25px;
-  height: 25px;
-  margin: 3px;
+.tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
-.design, .noCode, .artificialIntelligence {
+.tools img {
+  width: 35px;
+  height: 35px;
+  margin: 3px;
+  justify-self: center;
+}
+
+.design,
+.noCode,
+.artificialIntelligence {
   width: 100%;
   background-color: var(--background-color);
   padding: 20px;
@@ -301,7 +309,8 @@ h2 {
   gap: 20px;
 }
 
-.interests, .chat {
+.interests,
+.chat {
   width: 100%;
   background: #f0f0f0;
   padding: 20px;
@@ -348,12 +357,14 @@ h2 {
 }
 
 .chat a {
-  color: #DDDDDD;
+  color: #dddddd;
   text-decoration: none;
   font-size: 14px;
 }
 
-.editButton, .saveButton, .cancelButton{
+.editButton,
+.saveButton,
+.cancelButton {
   width: 10rem;
   height: 4rem;
   margin: 1rem;
@@ -363,21 +374,23 @@ h2 {
   font-size: 16px;
 }
 
-.editButton, .saveButton{
+.editButton,
+.saveButton {
   background-color: var(--primary-color);
   color: var(--background-color);
 }
 
-.editButton:hover, .saveButton:hover{
+.editButton:hover,
+.saveButton:hover {
   background-color: var(--hover-color);
   color: var(--background-color);
 }
-.cancelButton{
+.cancelButton {
   background-color: rgb(239, 87, 87);
   color: var(--background-color);
 }
 
-.cancelButton:hover{
+.cancelButton:hover {
   background-color: rgb(192, 67, 67);
   color: var(--background-color);
 }
@@ -394,13 +407,13 @@ h2 {
 }
 
 .editItem input:focus {
-  border-color: #00ffc3; 
-  box-shadow: 0 0 5px rgba(0, 255, 136, 0.5); 
-  outline: none; 
+  border-color: #00ffc3;
+  box-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+  outline: none;
 }
 
 .ripple {
-  background: rgba(0, 255, 136, 0.5);
+  background: rgba(0, 255, 136);
   width: 1px;
   height: 1px;
   border-radius: 100%;
@@ -446,66 +459,69 @@ h2 {
 /* Адаптивность */
 @media (max-width: 768px) {
   .container {
-      padding: 10px;
+    padding: 10px;
   }
 
   header {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .profileImg img {
-      width: 120px;
-      height: 120px;
+    width: 120px;
+    height: 120px;
   }
 
   .infoBox {
-      flex-direction: column;
-      margin-left: 0;
-      align-items: flex-start;
+    flex-direction: column;
+    margin-left: 0;
+    align-items: flex-start;
   }
 
-  .nameBox, .languagesBox {
-      width: 100%;
-      margin-bottom: 20px;
+  .nameBox,
+  .languagesBox {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .cardContainerExperienceTools {
-      flex-direction: column;
+    flex-direction: column;
   }
 
-  .experienceBox, .toolsBox {
-      width: 100%;
+  .experienceBox,
+  .toolsBox {
+    width: 100%;
   }
 
-  .education, .interestsChatContainer {
-      flex: 1 1 100%;
+  .education,
+  .interestsChatContainer {
+    flex: 1 1 100%;
   }
 
   .educationItem {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 }
 
 @media (max-width: 480px) {
   .tools img {
-      width: 20px;
-      height: 20px;
+    width: 20px;
+    height: 20px;
   }
 
   .educationItem h3 {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .educationItem p {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   .chat p {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .chat a {
-      font-size: 12px;
+    font-size: 12px;
   }
 }

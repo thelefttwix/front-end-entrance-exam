@@ -4,7 +4,6 @@ const edit_items = document.querySelectorAll(".editItem");
 const edit_button = document.querySelector(".editButton");
 const save_button = document.querySelector(".saveButton");
 const cancel_button = document.querySelector(".cancelButton");
-const visible_items = document.querySelectorAll(".visible-item");
 
 edit_button.addEventListener("click", () => {
     for (const item of edit_items) {

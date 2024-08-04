@@ -189,9 +189,24 @@ h2 {
 }
 
 .date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
   font-size: 1.1em;
   font-weight: bold;
+}
+
+.date .recent {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.recent {
+  color: #DDF163;
+  background-color: rgba(125, 114, 18, 0.4);
+  border-radius: 20px;
+  padding: 5px;
 }
 
 .jobContent {
@@ -228,6 +243,7 @@ h2 {
 .jobSkills li {
   margin-bottom: 5px;
 }
+
 
 .tools {
   margin-bottom: 20px;

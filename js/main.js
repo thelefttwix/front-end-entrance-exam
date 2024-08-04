@@ -34,7 +34,7 @@ save_button.addEventListener("click", () => {
         if (input) {
             const value = input.value;
             edit_items[i].innerText = value;
-            localStorage.setItem(`editItem-${i}`, value); // Save to localStorage
+            localStorage.setItem(`editItem-${i}`, value);
         }
     }
 
@@ -78,4 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
             item.innerText = savedValue;
         }
     });
+});
+
+// downloading pdf
+document.getElementById('downloadButton').addEventListener('click', () => {
+    const element = document.documentElement;
+    const opt = {
+        filename: 'best-resume.pdf',
+        image: {type: 'jpeg', quality: 0.98},
+        html2canvas: {
+            scale: 2,
+            ignoreElements: (element) => {
+                const ignoreClasses = ['editButton', 'downloadButton'];
+                return ignoreClasses.some(cls => element.classList.contains(cls));
+            },
+            // y: 650,
+        },
+        jsPDF: {unit: 'in', format: 'a2', orientation: 'portrait'},
+    };
+    html2pdf().set(opt).from(element).save();
 });

@@ -52,7 +52,10 @@
           <section class="experienceBox card">
             <h2>Experience</h2>
             <div ripple class="job job1">
-              <p class="date"><strong>Jun. 2023 - Present</strong><span class="recent">most recent</span></p>
+              <p class="date">
+                <strong>Jun. 2023 - Present</strong
+                ><span class="recent">most recent</span>
+              </p>
               <div class="jobContent">
                 <div class="jobName">
                   <h3 class="editItem">
@@ -134,37 +137,37 @@
               <div class="tools">
                 <img
                   class="toolLogo"
-                  src="./img/logoFigma.png"
+                  src="./img/logoFigma.svg"
                   alt="Figma"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/logoMeet.png"
+                  src="./img/logoMeet.svg"
                   alt="Google Meet"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/logoNotion.png"
+                  src="./img/logoNotion.svg"
                   alt="Notion"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/icon _adobe illustrator_.png"
+                  src="./img/icon_adobe illustrator.svg"
                   alt="Adobe Illustrator"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/icon _adobe photoshop_.png"
+                  src="./img/icon_adobe photoshop.svg"
                   alt="Adobe Photoshop"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/icon _adobe premiere_.png"
+                  src="./img/icon_adobe premiere.svg"
                   alt="Adobe Premiere"
                   loading="lazy"
                 />
@@ -175,26 +178,25 @@
               <div class="tools asyncImage">
                 <img
                   class="toolLogo"
-                  src="./img/logoFramer.png"
-                  data-src="/img/icon _adobe illustrator_.png"
+                  src="./img/logoFramer.svg"
                   alt="Framer"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/logoZapier.png"
+                  src="./img/logoZapier.svg"
                   alt="Zapier"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/logoWebflow.png"
+                  src="./img/logoWebflow.svg"
                   alt="Webflow"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/logoWordpress.png"
+                  src="./img/logoWordpress.svg"
                   alt="WordPress"
                   loading="lazy"
                 />
@@ -205,19 +207,19 @@
               <div class="tools">
                 <img
                   class="toolLogo"
-                  src="./img/logoChatGPT.png"
+                  src="./img/logoChatGPT.svg"
                   alt="ChatGPT"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/logoCopilot.png"
+                  src="./img/logoCopilot.svg"
                   alt="Copilot"
                   loading="lazy"
                 />
                 <img
                   class="toolLogo"
-                  src="./img/logoMidjourney.png"
+                  src="./img/logoMidjourney.svg"
                   alt="Midjourney"
                   loading="lazy"
                 />
@@ -231,7 +233,17 @@
             <h2>Education</h2>
             <div class="educationItemsContainer">
               <div ripple class="educationItem">
-                <h3 class="editItem">UI/UX <span>2023</span></h3>
+                <div class="headerIcon">
+                <h3 class="editItem">
+                  UI/UX <span>2023</span>
+                </h3>
+                <img
+                    src="./img/Vector.png"
+                    alt="Icon"
+                    class="icon"
+                    loading="lazy"
+                  />
+              </div>
                 <p class="editItem">
                   #UX #UI #Research #DesignSystem #Wireframing #Figma
                 </p>
@@ -285,7 +297,14 @@
       <button ripple class="editButton">Edit information</button>
       <button ripple class="saveButton" hidden>Save</button>
       <button ripple class="cancelButton" hidden>Cancel</button>
+      <button id="downloadButton" class="downloadButton">Download PDF</button>
     </div>
-    <script src="/js/main.js"></script>
+    <script src="./js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>

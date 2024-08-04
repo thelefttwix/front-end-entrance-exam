@@ -306,17 +306,42 @@ h2 {
 .educationItem h3 {
   margin: 0;
   font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .educationItem h3 span {
-  display: block;
   font-size: 14px;
+  margin-left: 10px;
+}
+
+.educationItem h3 img.icon {
+  width: 20px; 
+  height: 20px;
+  margin-left: 10px;
+  z-index: 10;
 }
 
 .educationItem p {
   margin: 5px 0;
   font-size: 14px;
 }
+
+.headerIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
 
 .interestsChatContainer {
   flex: 0 0 40%;
@@ -380,7 +405,8 @@ h2 {
 
 .editButton,
 .saveButton,
-.cancelButton {
+.cancelButton,
+.downloadButton {
   width: 10rem;
   height: 4rem;
   margin: 1rem;
@@ -391,13 +417,15 @@ h2 {
 }
 
 .editButton,
-.saveButton {
+.saveButton,
+.downloadButton {
   background-color: var(--primary-color);
   color: var(--background-color);
 }
 
 .editButton:hover,
-.saveButton:hover {
+.saveButton:hover,
+.downloadButton:hover {
   background-color: var(--hover-color);
   color: var(--background-color);
 }

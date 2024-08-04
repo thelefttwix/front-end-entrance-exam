@@ -1,96 +1,434 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+:root {
+  --primary-color: #28D979;
+  --background-color: #fff;
+  --shadow-color: rgba(0,0,0,0.1);
+  --font-color-dark: #333;
+  --font-color-light: #666;
+  --font-color-white: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--background-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+  border-radius: 10px;
+}
+
+header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.profileImg img {
+  border-radius: 10%;
+  width: 150px;
+  height: 150px;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.infoBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  margin-left: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.nameBox, .languagesBox {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.nameBox h3 {
+  margin-bottom: 4rem;
 }
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+
+.languagesBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.languagesBox ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.languageBar {
+  height: 1rem;
+  background-color: var(--primary-color);
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+.languageBar[data-level="high"] {
+  width: 70%;
+}
+
+.languageBar[data-level="medium"] {
+  width: 55%;
+}
+
+.languageBar[data-level="low"] {
+  width: 30%;
+}
+
+.cardContainerExperienceTools {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
 }
 
 .card {
-  padding: 2em;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--shadow-color);
 }
 
-.read-the-docs {
-  color: #888;
+.experienceBox {
+  flex: 3;
 }
 
-button {
+.toolsBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.toolCategory {
+  width: 100%;
+}
+
+.toolCategory h3 {
+  background-color: #333;
+  color: var(--font-color-white);
+  padding: 3px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  border-radius: 4px;
+  top: -30px;
+  z-index: 1;
+}
+
+.tools img {
+  width: 25px;
+  height: 25px;
+  margin: 3px;
+}
+
+.design, .noCode, .artificialIntelligence {
+  width: 100%;
+  background-color: var(--background-color);
+  padding: 20px;
+  box-shadow: 0 0 5px var(--shadow-color);
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.job {
+  background-color: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.job1 {
+  background-color: var(--primary-color);
+  color: var(--font-color-white);
+}
+
+.job1 .jobName span {
+  color: var(--font-color-white);
+}
+
+.date {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.jobContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.jobName {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.jobName h3 {
+  margin: 0;
+}
+
+.jobName span {
+  font-size: 0.9em;
+  font-family: "PoppinsLight";
+  color: var(--font-color-light);
+}
+
+.jobSkills {
+  flex: 1;
+}
+
+.jobSkills ul {
+  list-style-type: disc;
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.jobSkills li {
+  margin-bottom: 5px;
+}
+
+.tools {
+  margin-bottom: 20px;
+}
+
+.toolCategory {
+  margin-bottom: 25px;
+}
+
+.tools .tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.additionalInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  background: var(--background-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.education {
+  flex: 0 0 60%;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--shadow-color);
+  box-sizing: border-box;
+}
+
+.educationItemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.educationItem {
+  background: var(--background-color);
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  padding: 15px;
+  box-sizing: border-box;
+  flex: 1 1 calc(50% - 20px);
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.educationItem:first-of-type {
+  background-color: var(--primary-color);
+  color: var(--font-color-white);
+}
+
+.educationItem h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.educationItem h3 span {
+  display: block;
+  font-size: 14px;
+}
+
+.educationItem p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.interestsChatContainer {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.interests, .chat {
+  width: 100%;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--shadow-color);
+}
+
+.interests ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.interests li {
+  background-color: var(--background-color);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  font-size: 14px;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.hashtag {
+  color: #149063;
+}
+
+.chat {
+  background: black;
+  color: var(--font-color-white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--shadow-color);
+}
+
+.chat p {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.chat a {
+  color: #DDDDDD;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Подключение шрифтов */
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins/Poppins-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PoppinsBold";
+  src: url(/fonts/Poppins/Poppins-Bold.ttf);
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PoppinsLight";
+  src: url(/fonts/Poppins/Poppins-Light.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
   }
-  a:hover {
-    color: #747bff;
+
+  header {
+      flex-direction: column;
+      align-items: flex-start;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .profileImg img {
+      width: 120px;
+      height: 120px;
+  }
+
+  .infoBox {
+      flex-direction: column;
+      margin-left: 0;
+      align-items: flex-start;
+  }
+
+  .nameBox, .languagesBox {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .cardContainerExperienceTools {
+      flex-direction: column;
+  }
+
+  .experienceBox, .toolsBox {
+      width: 100%;
+  }
+
+  .education, .interestsChatContainer {
+      flex: 1 1 100%;
+  }
+
+  .educationItem {
+      flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tools img {
+      width: 20px;
+      height: 20px;
+  }
+
+  .educationItem h3 {
+      font-size: 14px;
+  }
+
+  .educationItem p {
+      font-size: 12px;
+  }
+
+  .chat p {
+      font-size: 18px;
+  }
+
+  .chat a {
+      font-size: 12px;
   }
 }

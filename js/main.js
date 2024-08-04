@@ -1,24 +1,48 @@
-import '../css/style.css'
-import javascriptLogo from '../javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+let previous_state = [];
 
-setupCounter(document.querySelector('#counter'))
+const edit_items = document.querySelectorAll(".edit-item");
+const edit_button = document.querySelector(".edit-button");
+const save_button = document.querySelector(".save-button");
+const cancel_button = document.querySelector(".cancel-button");
+const visible_items = document.querySelectorAll(".visible-item");
+
+console.log(visible_items);
+edit_button.addEventListener("click", () => {
+    for (const item of edit_items) {
+        const text = item.innerText;
+
+        previous_state.push(text)
+        item.innerHTML = `<input type="text" value="${text}">`
+    }
+
+    edit_button.hidden = true;
+    save_button.hidden = false;
+    cancel_button.hidden = false;
+});
+
+cancel_button.addEventListener("click", () => {
+    for (let i = 0; i < edit_items.length; i++) {
+        edit_items[i].innerText = previous_state[i];
+    }
+    previous_state = [];
+
+    edit_button.hidden = false;
+    save_button.hidden = true;
+    cancel_button.hidden = true;
+});
+
+save_button.addEventListener("click", () => {
+    for (const item of edit_items) {
+        item.innerText = item.children[0].value;
+    }
+    for (let i = 0; i < visible_items.length; i++) {
+      visible_items[i].innerText = edit_items[i].innerText;
+    }
+
+    previous_state = [];
+
+    edit_button.hidden = false;
+    save_button.hidden = true;
+    cancel_button.hidden = true;
+});
